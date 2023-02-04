@@ -1,0 +1,15 @@
+@startuml
+package java <<Rectangle>>{
+    package java.lang <<Rectangle>>{
+        interface Iterable<E>
+    }
+
+    package java.util <<Rectangle>>{
+        interface Iterator<E>
+        interface ListIterator<E>
+    }
+}
+
+Iterator <|-- ListIterator
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+
+interface Iterable<E>
+interface Collection<E>
+interface List<E>
+interface Set<E>
+interface SortedSet<E>
+interface NavigableSet<E>
+interface Queue<E>
+interface Deque<E>
+
+Iterable <|-- Collection
+Collection <|-- List
+Collection <|-- Set
+Collection <|-- Queue
+Set <-- SortedSet
+SortedSet <-- NavigableSet
+Queue <-- Deque
+
+@enduml
