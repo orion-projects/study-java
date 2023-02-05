@@ -1,0 +1,10 @@
+@startuml
+interface Map<K, V>
+interface SortedMap<K, V>
+interface NavigableMap<K, V>
+
+Map <-- SortedMap
+
+SortedMap <-- NavigableMap
+
+@enduml

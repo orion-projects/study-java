@@ -1,0 +1,35 @@
+@startuml
+
+interface Collection<E>
+abstract class AbstractCollection<E>
+abstract class AbstractList<E>
+class ArrayList<E>
+class LinkedList<E>
+abstract class AbstractSet<E>
+abstract class EnumSet<Set>
+class HashSet<E>
+class LinkedHashSet<E>
+class TreeSet<E>
+abstract class AbstractQueue<E>
+class ArrayDeque<E>
+class PriorityQueue
+
+Collection <-- AbstractCollection
+
+AbstractCollection <-- AbstractList
+AbstractCollection <-- AbstractSet
+AbstractCollection <-- AbstractQueue
+
+AbstractList <-- ArrayList
+AbstractList <-- LinkedList
+
+AbstractSet <-- HashSet
+AbstractSet <-- EnumSet
+AbstractSet <-- TreeSet
+
+HashSet <-- LinkedHashSet
+
+AbstractCollection <-- ArrayDeque
+AbstractQueue <-- PriorityQueue
+
+@enduml

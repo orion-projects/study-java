@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractMap
+class HashMap
+class LinkedHashMap
+class TreeMap
+class EnumMap
+class WeakHashMap
+class IdentityHashMap
+
+
+@enduml
