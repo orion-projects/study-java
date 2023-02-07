@@ -1,0 +1,30 @@
+@startuml
+
+class CharBuffer
+
+abstract class InputStream
+abstract class OutputStream
+abstract class Reader
+abstract class Writer
+
+interface Closeable
+interface Flushable
+interface Appendable
+interface Readable
+
+Closeable <|.left. InputStream
+Closeable <|.up. OutputStream
+Closeable <|.down. Reader
+Closeable <|.right. Writer
+
+Flushable <|.down. Writer
+Flushable <|.left. OutputStream
+
+Appendable <|.left. Writer
+Appendable <|.up. StringBuilder
+Appendable <|.down. CharBuffer
+
+Readable <|.up. Reader
+Readable <|.right. CharBuffer
+
+@enduml

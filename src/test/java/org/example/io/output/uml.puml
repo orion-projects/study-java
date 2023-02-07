@@ -1,0 +1,39 @@
+@startuml
+
+abstract class OutputStream
+class ByteArrayOutputStream
+class FileOutputStream
+class FilterOutputStream
+class PipedOutputStream
+class ObjectOutputStream
+class BufferedOutputStream
+class CheckedOutputStream
+class CipherOutputStream
+class DeflaterOutputStream
+class DigestOutputStream
+class PrintStream
+class DataOutputStream
+class GZIPOutputStream
+class ZipOutputStream
+class JarOutputStream
+
+OutputStream <-- ByteArrayOutputStream
+OutputStream <-- FileOutputStream
+OutputStream <-- FilterOutputStream
+OutputStream <-- PipedOutputStream
+OutputStream <-- ObjectOutputStream
+
+FilterOutputStream <-- BufferedOutputStream
+FilterOutputStream <-- CheckedOutputStream
+FilterOutputStream <-- CipherOutputStream
+FilterOutputStream <-- DeflaterOutputStream
+FilterOutputStream <-- DigestOutputStream
+FilterOutputStream <-- PrintStream
+FilterOutputStream <-- DataOutputStream
+
+DeflaterOutputStream <-- GZIPOutputStream
+DeflaterOutputStream <-- ZipOutputStream
+
+ZipOutputStream <-- JarOutputStream
+
+@enduml

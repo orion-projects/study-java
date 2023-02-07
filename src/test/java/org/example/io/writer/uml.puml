@@ -1,0 +1,23 @@
+@startuml
+
+abstract class Writer
+class BufferedWriter
+class CharArrayWriter
+class FilterWriter
+class OutputStreamWriter
+class PipedWriter
+class PrintWriter
+class StringWriter
+class FileWriter
+
+Writer <-- BufferedWriter
+Writer <-- CharArrayWriter
+Writer <-- FilterWriter
+Writer <-- OutputStreamWriter
+Writer <-- PipedWriter
+Writer <-- PrintWriter
+Writer <-- StringWriter
+
+OutputStreamWriter <-- FileWriter
+
+@enduml

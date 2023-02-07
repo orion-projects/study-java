@@ -1,0 +1,53 @@
+@startuml
+
+abstract class InputStream
+
+class AudioInputStream
+class ByteArrayInputStream
+class FileInputStream
+class PipedInputStream
+class FilterInputStream
+class SequenceInputStream
+class StringBufferInputStream
+class ObjectInputStream
+
+class BufferInputStream
+class CheckedInputStream
+class CipherInputStream
+class DigestInputStream
+class InflaterInputStream
+class LineNumberInputStream
+class ProcessMonitorInputStream
+class PushbackInputStream
+class DataInputStream
+
+class GZIPInputStream
+class ZipInputStream
+
+class JarInputStream
+
+InputStream <-- AudioInputStream
+InputStream <-- ByteArrayInputStream
+InputStream <-- FileInputStream
+InputStream <-- PipedInputStream
+InputStream <-- SequenceInputStream
+InputStream <-- StringBufferInputStream
+InputStream <-- ObjectInputStream
+InputStream <-- FilterInputStream
+
+FilterInputStream <-- BufferInputStream
+FilterInputStream <-- CheckedInputStream
+FilterInputStream <-- CipherInputStream
+FilterInputStream <-- DigestInputStream
+FilterInputStream <-- LineNumberInputStream
+FilterInputStream <-- ProcessMonitorInputStream
+FilterInputStream <-- PushbackInputStream
+FilterInputStream <-- DataInputStream
+FilterInputStream <-- InflaterInputStream
+
+InflaterInputStream <-- GZIPInputStream
+InflaterInputStream <-- ZipInputStream
+
+ZipInputStream <-- JarInputStream
+
+@enduml
