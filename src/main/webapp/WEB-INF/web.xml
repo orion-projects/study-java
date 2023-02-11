@@ -5,8 +5,29 @@
 <web-app>
     <display-name>just for study</display-name>
 
+    <!-- 引入xml配置文件 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:spring/web.xml</param-value>
+    </context-param>
+
+    <!-- 引入Java配置文件 -->
+    <context-param>
+        <param-name>contextInitializerClasses</param-name>
+        <param-value>org.example.spring.bean.config.ConfigureBean</param-value>
+    </context-param>
 
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
+
+    <servlet>
+        <servlet-name>servlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 </web-app>

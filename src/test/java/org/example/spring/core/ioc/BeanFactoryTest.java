@@ -1,5 +1,6 @@
 package org.example.spring.core.ioc;
 
+import org.example.spring.bean.BeanImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -18,6 +19,6 @@ public class BeanFactoryTest {
 
     @Test
     public void getBean(){
-        System.out.println(beanFactory.getBean("bean", BeanFactoryBean.class));
+        System.out.println(beanFactory.getBean("bean", BeanImpl.class));
     }
 }
