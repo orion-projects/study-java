@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="study-java">
-    <output-path>$PROJECT_DIR$/out/artifacts/study_java</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/study</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -19,6 +19,16 @@
           <element id="library" level="project" name="Maven: io.micrometer:micrometer-commons:1.10.3" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:6.0.4" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:6.0.4" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.9.19" />
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.32" />
+          <element id="library" level="project" name="Maven: jakarta.servlet:jakarta.servlet-api:6.0.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.14.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.14.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.5.1" />
+          <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator:6.2.5.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" />
+          <element id="library" level="project" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="study-java/web/Web" />

@@ -11,8 +11,4 @@ public class ConfigureBean {
         return new BeanImpl();
     }
 
-    @Bean("web")
-    public BeanImpl getWeb(){
-        return new BeanImpl();
-    }
 }

@@ -12,10 +12,9 @@
     </context-param>
 
     <!-- 引入Java配置文件 -->
-    <context-param>
-        <param-name>contextInitializerClasses</param-name>
+   <!--    <param-name>contextInitializerClasses</param-name>
         <param-value>org.example.spring.bean.config.ConfigureBean</param-value>
-    </context-param>
+    </context-param>-->
 
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -25,9 +24,21 @@
     <servlet>
         <servlet-name>servlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--
+            Spring配置文件的路径，默认为<servlet-name>-servlet。指定该属性后，配置文件的路径为
+            WEB-INF/<namespace>.xml，而不是WEB-INF/<servlet-name>-servlet.xml。
+         -->
+        <init-param>
+            <param-name>namespace</param-name>
+            <param-value>study</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>servlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/Spring/*</url-pattern>
     </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
 </web-app>
