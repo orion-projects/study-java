@@ -1,6 +1,5 @@
 package org.example.spring.web.converter;
 
-import org.example.spring.web.User;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.HttpOutputMessage;
 import org.springframework.http.MediaType;
@@ -14,7 +13,7 @@ import java.util.List;
 public class HttpMessageConverterImpl implements HttpMessageConverter<String> {
     @Override
     public boolean canRead(Class<?> clazz, MediaType mediaType) {
-        if(clazz.equals(User.class)){
+        if(clazz.equals(HttpMessageConverterBean.class)){
             return true;
         }
         return false;
@@ -22,7 +21,7 @@ public class HttpMessageConverterImpl implements HttpMessageConverter<String> {
 
     @Override
     public boolean canWrite(Class<?> clazz, MediaType mediaType) {
-        if(clazz.equals(User.class)){
+        if(clazz.equals(HttpMessageConverterBean.class)){
             return true;
         }
         return false;

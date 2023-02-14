@@ -32,6 +32,11 @@
             <param-name>namespace</param-name>
             <param-value>study</param-value>
         </init-param>
+        <multipart-config>
+            <location>d:/</location>
+            <max-file-size>102400000</max-file-size>
+            <max-requst-size>1024000000</max-requst-size>
+        </multipart-config>
     </servlet>
     <servlet-mapping>
         <servlet-name>servlet</servlet-name>
