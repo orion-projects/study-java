@@ -15,6 +15,7 @@ import java.util.Map;
  * 4、params: 指定HTTP请求参数。
  */
 @Controller
+@SessionAttributes("userId")
 public class ControllerImpl {
 
     /**
@@ -75,18 +76,67 @@ public class ControllerImpl {
         return map;
     }
 
+    /**
+     * 用于获取multiparty/form-data（文件上传请求）请求的请求体数据。
+     * @param str
+     * @return
+     */
+    @RequestMapping("requestPart")
+    public ModelAndView requestPart(@RequestPart String str){
+        return null;
+    }
+
+    /**
+     * 获取request中指定属性的值。相当于调用request.getAttribute()。
+     * @param str
+     * @return
+     */
+    @RequestMapping("requestAttribute")
+    public ModelAndView requestAttribute(@RequestAttribute("string") String str){
+        return null;
+    }
+
+    /**
+     * 修饰方法，将该方法的返回值绑定到model。可以相控制器一样使用注解获取参数。
+     */
     @ModelAttribute
     public Object modelAttribute(){
         return "abc";
     }
 
+    /**
+     * 修饰参数，将该参数绑定到model。
+     * @param userId
+     * @return
+     */
     @RequestMapping("ModelAttribute")
     public ModelAndView modelAttribute(@ModelAttribute String userId){
         return null;
     }
 
+    /**
+     * 获取session中指定的值。
+     * @param userId
+     * @return
+     */
+    @RequestMapping
+    public ModelAndView sessionAttribute(@SessionAttribute("userId") String userId){
+        return null;
+    }
+
+    /**
+     * 将指定的参数存储到session。
+     * @param userId
+     * @return
+     */
     @RequestMapping("SessionAttributes")
     public ModelAndView sessionAttributes(@SessionAttribute String userId){
+        return null;
+    }
+
+    @RequestMapping("crossOrigin")
+    @CrossOrigin
+    public ModelAndView crossOrigin(){
         return null;
     }
 }

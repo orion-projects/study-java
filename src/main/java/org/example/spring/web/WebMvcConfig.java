@@ -3,7 +3,7 @@ package org.example.spring.web;
 import org.example.spring.web.binder.ConverterBean;
 import org.example.spring.web.binder.converter.ConverterImpl;
 import org.example.spring.web.formatter.AnnotationFormatterFactoryImpl;
-import org.example.spring.web.formatter.Formatter;
+import org.example.spring.web.formatter.FormatterBean;
 import org.example.spring.web.formatter.FormatterImpl;
 import org.example.spring.web.interceptor.HandlerInterceptorImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +22,9 @@ import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.config.annotation.*;
-import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.view.ContentNegotiatingViewResolver;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
-import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import java.util.HashSet;
 import java.util.List;
@@ -122,7 +120,7 @@ public class WebMvcConfig extends DelegatingWebMvcConfiguration {
     protected void addFormatters(FormatterRegistry registry) {
         super.addFormatters(registry);
         registry.addConverter(String.class, ConverterBean.class, new ConverterImpl());
-        registry.addFormatterForFieldType(Formatter.Sex.class, new FormatterImpl());
+        registry.addFormatterForFieldType(FormatterBean.Sex.class, new FormatterImpl());
         registry.addFormatterForFieldAnnotation(new AnnotationFormatterFactoryImpl());
     }
 

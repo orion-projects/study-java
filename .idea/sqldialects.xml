@@ -3,6 +3,7 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/database/mysql/Database.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/database/mysql/basic/DataType.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/database/mysql/index/Index.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/database/mysql/select/Select.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/database/mysql/table/Create.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/database/mysql/table/Modify.sql" dialect="MySQL" />
@@ -16,5 +17,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/database/redis/SortedSet.sql" dialect="Redis" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/database/redis/String.sql" dialect="Redis" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/database/redis/Transactions.sql" dialect="Redis" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/spring/transaction/TransactionDao.java" dialect="MySQL" />
   </component>
 </project>

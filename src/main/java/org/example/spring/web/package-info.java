@@ -5,6 +5,7 @@ package org.example.spring.web;
  * DispatcherServlet处理。
  * 2、DispatcherServlet接收到请求后，根据请求的信息及HandlerMapping的配置找到处理请求的Handler。
  * 3、DispatcherServlet根据HandlerMapping得到当前请求的Handler后，通过HandlerAdapter对Handler进行封装，再以统一的适配器接口调用Handler。
+ * HandlerAdapter在调用Handler之前对请求参数做数据转换和校验等工作。
  * 4、Handler完成业务逻辑后将返回一个ModelAndView给DispatcherServlet，ModelAndView包含了视图逻辑名和模型数据信息。
  * 5、DispatcherServlet借由ViewResolver完成逻辑名视图到真实视图对象View的解析工作。
  * 6、DispatcherServlet使用View对象对ModelAndView中模型数据进行视图渲染。
@@ -12,4 +13,13 @@ package org.example.spring.web;
  */
 /**
  * spring-mvc包下的DispatcherServlet.properties文件包含了预加载的Bean。
+ */
+
+/**
+ * 国际化解析器
+ * 1、查找名为localResolver、类型为LocaleResolver的Bean作为国际化解析器/
+ * 2、如果没有找到则使用默认实现类。
+ *
+ * 主题解析器
+ * 1、查找名为themeResolver、类型为ThemeResolver的Bean作为默认主题解析器。
  */

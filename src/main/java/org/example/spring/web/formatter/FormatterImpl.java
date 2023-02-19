@@ -5,7 +5,7 @@ import org.springframework.format.Formatter;
 import java.text.ParseException;
 import java.util.Locale;
 
-public class FormatterImpl implements Formatter<org.example.spring.web.formatter.Formatter.Sex> {
+public class FormatterImpl implements Formatter<FormatterBean.Sex> {
     /**
      * 格式化输入
      * @param text the text string
@@ -14,11 +14,11 @@ public class FormatterImpl implements Formatter<org.example.spring.web.formatter
      * @throws ParseException
      */
     @Override
-    public org.example.spring.web.formatter.Formatter.Sex parse(String text, Locale locale) throws ParseException {
+    public FormatterBean.Sex parse(String text, Locale locale) throws ParseException {
         if(text.equals("boy")){
-            return new org.example.spring.web.formatter.Formatter.Sex(0);
+            return new FormatterBean.Sex(0);
         }else {
-            return new org.example.spring.web.formatter.Formatter.Sex(1);
+            return new FormatterBean.Sex(1);
         }
     }
 
@@ -29,7 +29,7 @@ public class FormatterImpl implements Formatter<org.example.spring.web.formatter
      * @return
      */
     @Override
-    public String print(org.example.spring.web.formatter.Formatter.Sex object, Locale locale) {
+    public String print(FormatterBean.Sex object, Locale locale) {
         if(object.equals(Integer.valueOf(0))){
             return "boy";
         }else {

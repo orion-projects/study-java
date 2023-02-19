@@ -11,7 +11,7 @@ public class FormatterController {
 
 
     @RequestMapping("formatter")
-    public Map<String, Object> formatter(Formatter formatter){
+    public Map<String, Object> formatter(FormatterBean formatter){
         var map = new HashMap<String, Object>();
         map.put("formatter", formatter);
         return map;

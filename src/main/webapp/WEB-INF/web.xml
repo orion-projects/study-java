@@ -1,8 +1,10 @@
-<!DOCTYPE web-app PUBLIC
-        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
-        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8" ?>
 
-<web-app>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+    http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+    version="4.0">
     <display-name>just for study</display-name>
 
     <!-- 引入xml配置文件 -->
@@ -16,11 +18,12 @@
         <param-value>org.example.spring.bean.config.ConfigureBean</param-value>
     </context-param>-->
 
+    <!-- ContextLoadListener初始化根容器，主要负责配置、管理应用中的Service组件、Dao组件等后端组件 -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
-
+    <!-- DispatcherServlet初始化Spring容器，主要配置Controller组件、视图解析器、HandlerMapping组件等与MVC相关的组件 -->
     <servlet>
         <servlet-name>servlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -35,7 +38,7 @@
         <multipart-config>
             <location>d:/</location>
             <max-file-size>102400000</max-file-size>
-            <max-requst-size>1024000000</max-requst-size>
+            <max-request-size>102400000</max-request-size>
         </multipart-config>
     </servlet>
     <servlet-mapping>
